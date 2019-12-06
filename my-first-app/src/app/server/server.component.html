@@ -1,0 +1,10 @@
+<p class="p-5"> Server Component id: {{ getServerID() }} is {{ getServerStatus() }}.</p>
+
+<input
+type="text"
+class="form-control"
+(input)="onServerNaming($event)">
+
+<button class="btn btn-primary ml-3"
+[disabled]="!serverEnabled"
+(click)="onClickButton()">Add Server</button>
